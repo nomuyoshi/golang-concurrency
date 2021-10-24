@@ -11,6 +11,7 @@ func main() {
 	}
 }
 
+// orDone は複雑なfor-selectをラップした関数
 func orDone(done, ch <-chan interface{}) <-chan interface{} {
 	valStream := make(chan interface{})
 	go func() {
